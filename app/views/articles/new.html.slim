@@ -1,0 +1,20 @@
+.row.columns.align-center.text-center
+  h1 New Article
+
+== form_for :article, url: articles_path do |f|
+  .row.align-center
+    .small-12.medium-6.columns
+      p
+        == f.label      :title
+        == f.text_field :title
+
+  .row.align-center
+    .small-12.medium-6.columns
+      p
+        == f.label     :text
+        == f.text_area :text
+  
+  .row.align-center.text-center
+    .small-6.medium-4.columns
+      a
+        == f.submit

@@ -1,0 +1,18 @@
+.row.column.align-center.text-center
+  h1 Listing articles
+
+.row.align-center.text-center
+  .small-3.columns
+    strong Title
+  .small-7.columns
+    strong Text
+  .small-2.columns
+
+- @articles.each do |article|
+  .row.align-center.text-center
+    .small-3.columns
+      == article.title
+    .small-7.columns
+      == article.text
+    .small-2.columns
+      == link_to 'Show', article_path(article)
